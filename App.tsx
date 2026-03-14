@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { KilnOCRResult, ExtractionRecord } from './types';
 import { processUnifiedImages } from './services/geminiService';
+import ChatBot from './src/components/ChatBot';
 
 const KILN_CONFIGS: Record<string, string[]> = {
   "DC1": ["M31_M031", "M33_M033", "M35_M035", "M37_M037", "M39_M039", "M41_M041", "M43_M043", "M45_M045", "M47_M047", "M49_M049", "M51_M051", "M53_M053", "M55_M055", "M57_M057"],
@@ -582,6 +583,7 @@ const App: React.FC = () => {
           </section>
         </div>
       </main>
+      <ChatBot pageData={finalResult} />
     </div>
   );
 };
