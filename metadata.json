@@ -1,0 +1,7 @@
+{
+  "name": "KILN AI OCR - Hệ thống điều khiển lò nung",
+  "description": "Hệ thống trích xuất nhiệt độ Setpoint (dòng xanh) chuyên dụng cho lò nung gạch men.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

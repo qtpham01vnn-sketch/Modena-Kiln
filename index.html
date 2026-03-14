@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KILN AI OCR - Hệ Thống Trích Xuất Nhiệt Độ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #020617;
+        margin: 0;
+        color: #f8fafc;
+      }
+      .gradient-bg {
+        background: radial-gradient(circle at 0% 0%, #1e3a8a 0%, #020617 50%),
+                    radial-gradient(circle at 100% 100%, #1e40af 0%, #020617 50%);
+        min-height: 100vh;
+      }
+      .glass {
+        background: rgba(15, 23, 42, 0.7);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(56, 189, 248, 0.1);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+      
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-slide-up {
+        animation: slideUp 0.4s ease-out forwards;
+      }
+
+      @keyframes pulseRed {
+        0%, 100% { background-color: rgba(239, 68, 68, 0.1); box-shadow: 0 0 0px rgba(239, 68, 68, 0); }
+        50% { background-color: rgba(239, 68, 68, 0.3); box-shadow: 0 0 15px rgba(239, 68, 68, 0.4); }
+      }
+      .animate-pulse-red {
+        animation: pulseRed 2s infinite ease-in-out;
+        border-color: rgba(239, 68, 68, 0.5) !important;
+      }
+
+      @keyframes urgentBlink {
+        0%, 100% { color: #22d3ee; opacity: 1; transform: scale(1); text-shadow: 0 0 10px rgba(34, 211, 238, 0.5); }
+        50% { color: #fbbf24; opacity: 0.6; transform: scale(0.97); text-shadow: none; }
+      }
+      .animate-urgent-blink {
+        animation: urgentBlink 1s infinite ease-in-out;
+      }
+
+      @keyframes criticalBlink {
+        0%, 100% { border-color: #ef4444; background: rgba(153, 27, 27, 0.2); }
+        50% { border-color: #f87171; background: rgba(153, 27, 27, 0.6); box-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
+      }
+      .animate-critical-blink {
+        animation: criticalBlink 0.8s infinite ease-in-out;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(34, 211, 238, 0.3);
+        border-radius: 10px;
+      }
+    </style>
+    <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
